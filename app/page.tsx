@@ -44,64 +44,65 @@ export default function Home()
       {/* Glass Window */}
       <div
         style={{
-          width: "85%",
-          height: "82vh",
+          width: "90%",
+          maxWidth: "1400px",
+          minHeight: "82vh",
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
 backdropFilter: "blur(8px)",
 border: "1px solid rgba(154, 117, 159, 0.17)",
 boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
           color: "blackS",
-          overflow: "hidden",
+          overflow: "visible",
           position: "relative",
         }}
       >
         {/* Top Bar */}
-        <div
-          style={{
-            padding: "20px 30px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ display: "flex", gap: "10px" }}>
-            <div
-              style={{
-                width: "14px",
-                height: "14px",
-                borderRadius: "50%",
-                background: "#ff5f57",
-              }}
-            />
-            <div
-              style={{
-                width: "14px",
-                height: "14px",
-                borderRadius: "50%",
-                background: "#ffbd2e",
-              }}
-            />
-            <div
-              style={{
-                width: "14px",
-                height: "14px",
-                borderRadius: "50%",
-                background: "#28c840",
-              }}
-            />
-          </div>
-
-          <div
+<div
   style={{
-    color: "white",
-    fontWeight: "500",
-    fontSize: "18px",
+    padding: "20px 30px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   }}
 >
-  {new Date().toLocaleString()}
+  <div style={{ display: "flex", gap: "10px" }}>
+    <div
+      style={{
+        width: "14px",
+        height: "14px",
+        borderRadius: "50%",
+        background: "#ff5f57",
+      }}
+    />
+    <div
+      style={{
+        width: "14px",
+        height: "14px",
+        borderRadius: "50%",
+        background: "#ffbd2e",
+      }}
+    />
+    <div
+      style={{
+        width: "14px",
+        height: "14px",
+        borderRadius: "50%",
+        background: "#28c840",
+      }}
+    />
+  </div>
+
+  <div
+    style={{
+      color: "white",
+      fontWeight: "500",
+      fontSize: "18px",
+    }}
+  >
+    {new Date().toLocaleString()}
+  </div>
 </div>
-        </div>
 
         {/* Navbar */}
         <div
@@ -159,6 +160,8 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "0 80px",
+    flexWrap: "wrap",
+    gap: "40px",
   }}
 >
   {/* Left Side */}
@@ -175,7 +178,7 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
 
     <h1
       style={{
-        fontSize: "90px",
+        fontSize: "clamp(55px, 7vw, 90px)",
         fontWeight: 800,
         margin: 0,
         lineHeight: 1,
