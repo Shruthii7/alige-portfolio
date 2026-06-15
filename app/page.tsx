@@ -45,8 +45,9 @@ export default function Home()
       <div
         style={{
           width: "90%",
-          maxWidth: "1400px",
-          minHeight: "82vh",
+maxWidth: "1350px",
+minHeight: "85vh",
+          
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
 backdropFilter: "blur(8px)",
@@ -111,8 +112,8 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
             display: "flex",
             fontSize: "28px",
             justifyContent: "center",
-            gap: "30px",
-            marginTop: "10px",
+            gap: "18px",
+marginTop: "0px",
             fontWeight: "bold",
           }}
         >
@@ -135,14 +136,14 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
     if (item === "Contact") setContactOpen(true);
   }}
   style={{
-    padding: "12px 22px",
+    padding: "10px 18px",
+fontSize: "14px",
     borderRadius: "12px",
     background: "rgba(15,23,42,0.75)",
     border: "1px solid rgba(165, 96, 250, 0.3)",
     color: "white",
     cursor: "pointer",
-    fontSize: "15px",
-  }}
+      }}
 >
   {item}
 </button>
@@ -155,20 +156,24 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
 {/* Main Section */}
 <div
   style={{
-    height: "65%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0 80px",
-    flexWrap: "wrap",
+    padding: "30px 60px",
     gap: "40px",
+    minHeight: "420px",
   }}
 >
   {/* Left Side */}
-  <div style={{ maxWidth: "700px" }}>
+  <div
+    style={{
+      flex: 1,
+      maxWidth: "700px",
+    }}
+  >
     <p
       style={{
-        fontSize: "32px",
+        fontSize: "24px",
         color: "#d8b4fe",
         marginBottom: "10px",
       }}
@@ -178,14 +183,13 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
 
     <h1
       style={{
-        fontSize: "clamp(55px, 7vw, 90px)",
+        fontSize: "72px",
         fontWeight: 800,
         margin: 0,
         lineHeight: 1,
         background:
           "linear-gradient(90deg,#60a5fa,#c084fc,#e879f9)",
         WebkitBackgroundClip: "text",
-        textShadow: "0 0 15px rgba(168,85,247,0.4)",
         WebkitTextFillColor: "transparent",
       }}
     >
@@ -194,33 +198,35 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
 
     <p
       style={{
-        marginTop: "35px",
-        fontSize: "18px",
+        marginTop: "25px",
+        fontSize: "17px",
         color: "#e5e7eb",
+        lineHeight: 1.8,
       }}
     >
-      MSc Chemistry student with experience in research,
-      technical projects, and analytical problem solving.
-      Passionate about data-driven decision making,
-      process improvement.
-    </p>
-
-    <p
-      style={{
-        marginTop: "20px",
-        fontSize: "22px",
-        color: "#e5e7eb",
-      }}
-    >
-      (Open to Analyst, Operations & Graduate Opportunities)
+      MSc Chemistry student with experience in
+      research, technical projects, and analytical
+      problem solving. Passionate about
+      data-driven decision making and process
+      improvement.
     </p>
 
     <p
       style={{
         marginTop: "15px",
         fontSize: "18px",
+        color: "#d8b4fe",
+      }}
+    >
+      Open to Analyst, Operations &
+      Graduate Opportunities
+    </p>
+
+    <p
+      style={{
+        marginTop: "12px",
+        fontSize: "16px",
         color: "#cbd5e1",
-        lineHeight: 1.8,
       }}
     >
       Exploring the What, Why and How*
@@ -230,7 +236,9 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
   {/* Right Side */}
   <div
     style={{
-      width: "380px",
+      width: "270px",
+      padding: "18px",
+      flexShrink: 0,
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -239,7 +247,6 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
     <PatternMemory />
   </div>
 </div>
-
         {/* Bottom Buttons */}
         <div
   style={{
