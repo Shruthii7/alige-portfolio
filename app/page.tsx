@@ -44,9 +44,10 @@ export default function Home()
       {/* Glass Window */}
       <div
         style={{
-          width: "90%",
-maxWidth: "1350px",
-minHeight: "85vh",
+          maxWidth: "1400px",
+width: "90%",
+height: "72vh",
+minHeight: "72vh",
           
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
@@ -70,7 +71,7 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
   <div style={{ display: "flex", gap: "10px" }}>
     <div
       style={{
-        width: "14px",
+        maxWidth: "14px",
         height: "14px",
         borderRadius: "50%",
         background: "#ff5f57",
@@ -78,7 +79,7 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
     />
     <div
       style={{
-        width: "14px",
+        maxWidth: "14px",
         height: "14px",
         borderRadius: "50%",
         background: "#ffbd2e",
@@ -86,7 +87,7 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
     />
     <div
       style={{
-        width: "14px",
+        maxWidth: "14px",
         height: "14px",
         borderRadius: "50%",
         background: "#28c840",
@@ -159,8 +160,8 @@ fontSize: "14px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "30px 60px",
-    gap: "40px",
+    padding: "20px 50px",
+gap: "20px",
     minHeight: "420px",
   }}
 >
@@ -168,7 +169,7 @@ fontSize: "14px",
   <div
     style={{
       flex: 1,
-      maxWidth: "700px",
+      maxWidth: "550px",
     }}
   >
     <p
@@ -183,7 +184,7 @@ fontSize: "14px",
 
     <h1
       style={{
-        fontSize: "72px",
+        fontSize: "clamp(40px, 4vw, 65px)",
         fontWeight: 800,
         margin: 0,
         lineHeight: 1,
@@ -233,19 +234,17 @@ fontSize: "14px",
     </p>
   </div>
 
-  {/* Right Side */}
   <div
-    style={{
-      width: "270px",
-      padding: "18px",
-      flexShrink: 0,
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <PatternMemory />
-  </div>
+  style={{
+    width: "300px",
+    flexShrink: 0,
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  }}
+>
+  <PatternMemory />
+</div>
 </div>
         {/* Bottom Buttons */}
         <div
@@ -254,7 +253,7 @@ fontSize: "14px",
     justifyContent: "center",
     alignItems: "center",
     gap: "25px",
-    marginTop: "20px",
+    marginTop: "-10px",
     width: "100%",
   }}
 >
