@@ -26,8 +26,8 @@ export default function Home()
         backgroundPosition: "center",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        padding: "20px",
+        alignItems: "flex-start",
+      padding: "15px 60px",
         fontFamily: "Poppins, sans-serif",
       }}
       
@@ -46,8 +46,8 @@ export default function Home()
         style={{
           maxWidth: "1400px",
 width: "90%",
-height: "72vh",
-minHeight: "72vh",
+height: "82vh",
+minHeight: "82vh",
           
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
@@ -253,7 +253,7 @@ gap: "20px",
     justifyContent: "center",
     alignItems: "center",
     gap: "25px",
-    marginTop: "-10px",
+    marginTop: "-20px",
     width: "100%",
   }}
 >
