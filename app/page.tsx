@@ -7,6 +7,10 @@ import ContactModal from "./Components/ContactModal";
 import ProjectsModal from "./Components/ProjectsModal";
 import HobbiesModal from "./Components/HobbiesModal";
 import PatternMemory from "./Components/PatternMemory";
+const isMobile =
+  typeof window !== "undefined" &&
+  window.innerWidth < 768;
+
 export default function Home()
  {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -25,8 +29,9 @@ export default function Home()
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
+flexDirection: isMobile ? "column" : "row",
+justifyContent: "space-between",
+alignItems: "center",
       padding: "15px 60px",
         fontFamily: "Poppins, sans-serif",
       }}
@@ -45,7 +50,7 @@ export default function Home()
       <div
         style={{
           maxWidth: "1400px",
-width: "90%",
+width: isMobile ? "95%" : "90%",
 height: "86vh",
 minHeight: "86vh",
           
@@ -111,9 +116,10 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
           style={{
             
             display: "flex",
+flexWrap: "wrap",
             fontSize: "28px",
             justifyContent: "center",
-            gap: "18px",
+            gap: isMobile ? "10px" : "18px",
 marginTop: "0px",
             fontWeight: "bold",
           }}
@@ -184,7 +190,9 @@ gap: "20px",
 
     <h1
       style={{
-        fontSize: "clamp(40px, 4vw, 65px)",
+        fontSize: isMobile
+  ? "48px"
+  : "clamp(40px, 4vw, 65px)",
         fontWeight: 800,
         margin: 0,
         lineHeight: 1,
@@ -236,7 +244,7 @@ gap: "20px",
 
   <div
   style={{
-    width: "300px",
+    width: isMobile ? "100%" : "300px",
     flexShrink: 0,
     display: "flex",
     justifyContent: "flex-end",
@@ -250,6 +258,7 @@ gap: "20px",
         <div
   style={{
     display: "flex",
+flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
     gap: "25px",
