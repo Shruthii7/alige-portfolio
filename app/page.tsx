@@ -46,8 +46,8 @@ export default function Home()
         style={{
           maxWidth: "1400px",
 width: "90%",
-height: "82vh",
-minHeight: "82vh",
+height: "86vh",
+minHeight: "86vh",
           
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
@@ -70,29 +70,29 @@ boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
 >
   <div style={{ display: "flex", gap: "10px" }}>
     <div
-      style={{
-        maxWidth: "14px",
-        height: "14px",
-        borderRadius: "50%",
-        background: "#ff5f57",
-      }}
-    />
-    <div
-      style={{
-        maxWidth: "14px",
-        height: "14px",
-        borderRadius: "50%",
-        background: "#ffbd2e",
-      }}
-    />
-    <div
-      style={{
-        maxWidth: "14px",
-        height: "14px",
-        borderRadius: "50%",
-        background: "#28c840",
-      }}
-    />
+  style={{
+    width: "14px",
+    height: "14px",
+    borderRadius: "50%",
+    background: "#ff5f57",
+  }}
+/>
+   <div
+  style={{
+    width: "14px",
+    height: "14px",
+    borderRadius: "50%",
+    background: "#ffbd2e",
+  }}
+/>
+   <div
+  style={{
+    width: "14px",
+    height: "14px",
+    borderRadius: "50%",
+    background: "#28c840",
+  }}
+/>
   </div>
 
   <div
@@ -160,7 +160,7 @@ fontSize: "14px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "20px 50px",
+    padding: "10px 50px",
 gap: "20px",
     minHeight: "420px",
   }}
