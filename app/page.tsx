@@ -163,9 +163,15 @@ fontSize: "14px",
 {/* Main Section */}
 <div
   style={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
+   display: "flex",
+flexDirection:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "column"
+    : "row",
+
+justifyContent: "center",
+alignItems: "center",
     padding: "10px 50px",
 gap: "20px",
     minHeight: "420px",
@@ -175,7 +181,17 @@ gap: "20px",
   <div
     style={{
       flex: 1,
-      maxWidth: "550px",
+      maxWidth:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "100%"
+    : "550px",
+
+textAlign:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "center"
+    : "left",
     }}
   >
     <p
@@ -190,10 +206,13 @@ gap: "20px",
 
     <h1
       style={{
-        fontSize: isMobile
-  ? "48px"
-  : "clamp(40px, 4vw, 65px)",
+        fontSize:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "70px"
+    : "clamp(40px,4vw,65px)",
         fontWeight: 800,
+        
         margin: 0,
         lineHeight: 1,
         background:
@@ -259,11 +278,15 @@ gap: "20px",
   style={{
     display: "flex",
 flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
     gap: "25px",
     marginTop: "-20px",
-    width: "100%",
+    width:
+  typeof window !== "undefined" &&
+  window.innerWidth < 768
+    ? "100%"
+    : "300px",
   }}
 >
   <a
