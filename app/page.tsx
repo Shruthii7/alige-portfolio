@@ -51,8 +51,8 @@ alignItems: "center",
         style={{
           maxWidth: "1400px",
 width: isMobile ? "95%" : "90%",
-height: "86vh",
-minHeight: "86vh",
+height: "auto",
+minHeight: "90vh",
           
           borderRadius: "30px",
           background: "rgba(2,6,23,0.45)",
@@ -147,7 +147,7 @@ marginTop: "0px",
 fontSize: "14px",
     borderRadius: "12px",
     background: "rgba(15,23,42,0.75)",
-    border: "1px solid rgba(165, 96, 250, 0.3)",
+    border: "1px solid rgba(168,85,247,0.4)",
     color: "white",
     cursor: "pointer",
       }}
@@ -263,7 +263,7 @@ textAlign:
 
   <div
   style={{
-    width: isMobile ? "100%" : "300px",
+    width: isMobile ? "100%" : "260px",
     flexShrink: 0,
     display: "flex",
     justifyContent: "flex-end",
@@ -274,19 +274,13 @@ textAlign:
 </div>
 </div>
         {/* Bottom Buttons */}
-        <div
+    <div
   style={{
     display: "flex",
-flexWrap: "wrap",
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
     alignItems: "center",
-    gap: "25px",
-    marginTop: "-20px",
-    width:
-  typeof window !== "undefined" &&
-  window.innerWidth < 768
-    ? "100%"
-    : "300px",
+    gap: "20px",
+    marginTop: "30px",
   }}
 >
   <a
