@@ -10,22 +10,34 @@ export default function ProjectsModal({
   if (selectedProject === "iit") {
   return (
     <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.8)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+  style={{
+    position: "fixed",
+    inset: 0,
+    background: "rgba(0,0,0,0.75)",
+    backdropFilter: "blur(8px)",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
+    padding: "20px",
+    zIndex: 10000,
+  }}
+>
       <div
         style={{
-          width: "800px",
-          background: "#0f172a",
-          padding: "40px",
-          borderRadius: "25px",
-          color: "white",
+          width: "700px",
+maxWidth: "75vw",
+maxHeight: "80vh",
+overflowY: "auto",
+
+background: "#0f172a",
+padding: "30px",
+borderRadius: "25px",
+color: "white",
+
+border: "1px solid rgba(168,85,247,0.3)",
+boxShadow: "0 0 30px rgba(0,0,0,0.4)",
         }}
       >
         
@@ -104,23 +116,35 @@ export default function ProjectsModal({
 
 if (selectedProject === "cdac") {
   return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.8)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+   <div
+  style={{
+    position: "fixed",
+    inset: 0,
+    background: "rgba(0,0,0,0.75)",
+    backdropFilter: "blur(8px)",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
+    padding: "20px",
+    zIndex: 10000,
+  }}
+>
       <div
         style={{
-          width: "800px",
-          background: "#0f172a",
-          padding: "40px",
-          borderRadius: "25px",
-          color: "white",
+          width: "700px",
+maxWidth: "75vw",
+maxHeight: "80vh",
+overflowY: "auto",
+
+background: "#0f172a",
+padding: "30px",
+borderRadius: "25px",
+color: "white",
+
+border: "1px solid rgba(168,85,247,0.3)",
+boxShadow: "0 0 30px rgba(0,0,0,0.4)",
         }}
       >
         <h1
@@ -195,22 +219,34 @@ if (selectedProject === "cdac") {
 if (selectedProject === "openchem") {
   return (
     <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.8)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+  style={{
+    position: "fixed",
+    inset: 0,
+    background: "rgba(0,0,0,0.75)",
+    backdropFilter: "blur(8px)",
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
+    padding: "20px",
+    zIndex: 10000,
+  }}
+>
       <div
         style={{
-          width: "800px",
-          background: "#0f172a",
-          padding: "40px",
-          borderRadius: "25px",
-          color: "white",
+          width: "700px",
+maxWidth: "75vw",
+maxHeight: "80vh",
+overflowY: "auto",
+
+background: "#0f172a",
+padding: "30px",
+borderRadius: "25px",
+color: "white",
+
+border: "1px solid rgba(168,85,247,0.3)",
+boxShadow: "0 0 30px rgba(0,0,0,0.4)",
         }}
       >
         <h1
