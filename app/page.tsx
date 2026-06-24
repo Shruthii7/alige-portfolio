@@ -264,15 +264,22 @@ textAlign:
 
   <div
   style={{
-    width: isMobile ? "100%" : "260px",
+    width: isMobile ? "100%" : "380px",
+    height: "300px", // fixed height
+    minHeight: "520px",
+    
+    overflowY: "auto",
     flexShrink: 0,
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    marginTop: "10px",
+    marginBottom: "10px",
   }}
 >
   <PatternMemory />
 </div>
+
 </div>
         {/* Bottom Buttons */}
     <div
