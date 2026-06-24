@@ -50,15 +50,16 @@ alignItems: "center",
       <div
         style={{
           maxWidth: "1400px",
-width: isMobile ? "95%" : "90%",
-height: "auto",
-minHeight: "90vh",
-          
+          width: isMobile ? "85%" : "90%",
+          height: "auto",
+          minHeight: "90vh",
           borderRadius: "30px",
+          margin: "0 auto",
+          justifyContent: "center",
           background: "rgba(2,6,23,0.45)",
-backdropFilter: "blur(8px)",
-border: "1px solid rgba(154, 117, 159, 0.17)",
-boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
+          backdropFilter: "blur(8px)",
+          border: "1px solid rgba(154, 117, 159, 0.17)",
+          boxShadow: "0 0 50px rgba(42, 39, 39, 0.35)",
           color: "blackS",
           overflow: "visible",
           position: "relative",
@@ -277,10 +278,10 @@ textAlign:
     <div
   style={{
     display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    gap: "20px",
-    marginTop: "30px",
+    justifyContent: "center",
+    alignItems: "left",
+    gap: "18px",
+    marginTop: "10px",
   }}
 >
   <a
