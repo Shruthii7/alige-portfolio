@@ -7,6 +7,7 @@ import ContactModal from "./Components/ContactModal";
 import ProjectsModal from "./Components/ProjectsModal";
 import HobbiesModal from "./Components/HobbiesModal";
 import PatternMemory from "./Components/PatternMemory";
+import ResumeModal from "./Components/ResumeModal";
 const isMobile =
   typeof window !== "undefined" &&
   window.innerWidth < 768;
@@ -20,6 +21,7 @@ export default function Home()
   useState(false);
   const [hobbiesOpen, setHobbiesOpen] =
   useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <main
       style={{
@@ -141,6 +143,7 @@ marginTop: "0px",
     if (item === "Projects") setProjectsOpen(true);
     if (item === "Skills") setSkillsOpen(true);
     if (item === "Hobbies") setHobbiesOpen(true);
+    if (item === "Resume") setResumeOpen(true);
     if (item === "Contact") setContactOpen(true);
   }}
   style={{
@@ -370,8 +373,11 @@ textAlign:
   />
 )}
 
-
-
+{resumeOpen && (
+  <ResumeModal
+    onClose={() => setResumeOpen(false)}
+  />
+)}
 
     </main>
   );
