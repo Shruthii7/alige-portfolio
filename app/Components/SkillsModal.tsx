@@ -1,5 +1,7 @@
 "use client";
-
+const isMobile =
+  typeof window !== "undefined" &&
+  window.innerWidth < 768;
 export default function SkillsModal({
   onClose,
 }: {
@@ -18,11 +20,14 @@ export default function SkillsModal({
         zIndex: 999,
       }}
     >
+      {/* popup */}
       <div
         style={{
-          width: "900px",
-          maxWidth: "90%",
-          padding: "40px",
+          width: isMobile ? "95%" : "900px",
+maxWidth: "95vw",
+maxHeight: "90vh",
+overflowY: "auto",
+padding: isMobile ? "20px" : "40px",
           borderRadius: "25px",
           background: "rgba(5,10,30,0.95)",
           border: "1px solid rgba(168,85,247,0.25)",
@@ -53,7 +58,7 @@ export default function SkillsModal({
         <h1
           style={{
             marginBottom: "20px",
-            fontSize: "30px",
+            fontSize: isMobile ? "26px" : "30px",
             color: "#c084fc",
             fontWeight: "bold",
           }}
@@ -65,7 +70,9 @@ export default function SkillsModal({
           style={{
             color: "#94a3b8",
             marginBottom: "30px",
-            fontSize: "20px",
+            
+            fontSize: isMobile ? "15px" : "20px",
+lineHeight: 1.6,
           }}
         >
           Technical and analytical skills developed through projects, research and self-learning.
@@ -73,11 +80,18 @@ export default function SkillsModal({
 
         {/* Floating Cloud */}
         <div
-          style={{
-            position: "relative",
-            height: "400px",
-          }}
-        >
+  style={{
+    position: "relative",
+    height: isMobile ? "auto" : "400px",
+
+    display: isMobile ? "flex" : "block",
+    flexWrap: isMobile ? "wrap" : undefined,
+    justifyContent: isMobile ? "center" : undefined,
+    gap: isMobile ? "12px" : undefined,
+
+    marginTop: "25px",
+  }}
+>
           <div className="skill skill1">Excel</div>
           <div className="skill skill2">SQL</div>
           <div className="skill skill3">Analytics</div>

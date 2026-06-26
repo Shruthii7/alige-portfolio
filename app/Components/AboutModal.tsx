@@ -4,7 +4,9 @@ type AboutModalProps = {
   isOpen: boolean;
   onClose: () => void;
 };
-
+const isMobile =
+  typeof window !== "undefined" &&
+  window.innerWidth < 768;
 export default function AboutModal({
   isOpen,
   onClose,
@@ -33,14 +35,16 @@ export default function AboutModal({
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "850px",
-          maxWidth: "90vw",
+          width: isMobile ? "95%" : "850px",
+maxWidth: "95vw",
+maxHeight: "90vh",
+overflowY: "auto",
+padding: isMobile ? "20px" : "40px",
           background: "rgba(10,15,30,0.92)",
           backdropFilter: "blur(20px)",
           border: "1px solid rgba(255,255,255,0.1)",
           borderRadius: "24px",
-          padding: "40px",
-          zIndex: 1000,
+                    zIndex: 1000,
           color: "white",
         }}
       >
@@ -81,16 +85,18 @@ export default function AboutModal({
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "220px 1fr",
-            gap: "30px",
-            alignItems: "center",
+gridTemplateColumns: isMobile ? "1fr" : "220px 1fr",
+gap: isMobile ? "20px" : "30px",
+alignItems: "center",
+textAlign: isMobile ? "center" : "left",
           }}
         >
           {/* Profile Photo */}
           <div
             style={{
-              width: "220px",
-              height: "220px",
+              width: isMobile ? "160px" : "220px",
+height: isMobile ? "160px" : "220px",
+margin: "0 auto",
               borderRadius: "50%",
               overflow: "hidden",
               border: "3px solid #8b5cf6",
@@ -111,7 +117,7 @@ export default function AboutModal({
           <div>
             <h1
               style={{
-                fontSize: "42px",
+                fontSize: isMobile ? "30px" : "42px",
                 marginBottom: "10px",
               }}
             >
@@ -122,6 +128,7 @@ export default function AboutModal({
               style={{
                 color: "#c084fc",
                 marginBottom: "20px",
+              fontSize: isMobile ? "14px" : "16px",
               }}
             >
               Analytical Thinker • Research Enthusiast • Problem Solver
@@ -130,7 +137,9 @@ export default function AboutModal({
             <p
               style={{
                 color: "#d1d5db",
-                lineHeight: "1.8",
+                lineHeight: 1.8,
+fontSize: isMobile ? "15px" : "16px",
+textAlign: isMobile ? "center" : "left",
               }}
             >
               I am an MSc Chemistry student at NIT Surat passionate about research,
@@ -153,14 +162,17 @@ and contributing to projects that help me grow professionally.
             marginTop: "35px",
           }}
         >
-          <h3>Interests</h3>
+          <h3 style={{ textAlign: isMobile ? "center" : "left" }}>
+  Interests
+</h3>
 
           <div
             style={{
               display: "flex",
-              gap: "10px",
-              flexWrap: "wrap",
-              marginTop: "15px",
+justifyContent: isMobile ? "center" : "flex-start",
+gap: "10px",
+flexWrap: "wrap",
+marginTop: "15px",
             }}
           >
             {[

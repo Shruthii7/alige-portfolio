@@ -15,14 +15,7 @@
 
 .skill {
   position: absolute;
-  padding: 12px 22px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  backdrop-filter: blur(12px);
-  color: white;
-  font-weight: 600;
-  animation: float 4s ease-in-out infinite;
+  transition:.3s;
 }
 
 .skill1 {
@@ -82,4 +75,35 @@
   100% {
     transform: translateY(0px);
   }
+}
+@media (max-width:768px){
+
+.skill{
+    position:static !important;
+
+    transform:none !important;
+
+    width:auto;
+    height:auto;
+
+    padding:10px 16px;
+
+    font-size:14px;
+}
+
+.skill1,
+.skill2,
+.skill3,
+.skill4,
+.skill5,
+.skill6,
+.skill7,
+.skill8,
+.skill9{
+    top:auto !important;
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+}
+
 }
