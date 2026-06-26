@@ -31,10 +31,10 @@ export default function Home()
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
-flexDirection: isMobile ? "column" : "row",
-justifyContent: "space-between",
+flexDirection: isMobile ? "row" : "column",
 alignItems: "center",
-      padding: "15px 60px",
+justifyContent: "center",
+padding: isMobile ? "10px" : "20px",
         fontFamily: "Poppins, sans-serif",
       }}
       
@@ -51,10 +51,14 @@ alignItems: "center",
       {/* Glass Window */}
       <div
         style={{
-          maxWidth: "1400px",
-          width: isMobile ? "85%" : "90%",
+         
+ 
           height: "auto",
-          minHeight: "90vh",
+         
+          width: isMobile ? "100%" : "90%",
+maxWidth: "1400px",
+minHeight: isMobile ? "auto" : "90vh",
+padding: isMobile ? "20px" : "0px",
           borderRadius: "30px",
           margin: "0 auto",
           justifyContent: "center",
@@ -70,8 +74,9 @@ alignItems: "center",
         {/* Top Bar */}
 <div
   style={{
-    padding: "20px 30px",
+    padding: isMobile ? "12px" : "20px 30px",
     display: "flex",
+    fontSize: isMobile ? "11px" : "18px",
     justifyContent: "space-between",
     alignItems: "center",
   }}
@@ -120,11 +125,12 @@ alignItems: "center",
             
             display: "flex",
 flexWrap: "wrap",
-            fontSize: "28px",
+            fontSize: isMobile ? "11px" : "14px",
             justifyContent: "center",
             gap: isMobile ? "10px" : "18px",
 marginTop: "0px",
             fontWeight: "bold",
+            padding: isMobile ? "8px 10px" : "10px 18px",
           }}
         >
           {[
@@ -147,8 +153,8 @@ marginTop: "0px",
     if (item === "Contact") setContactOpen(true);
   }}
   style={{
-    padding: "10px 18px",
-fontSize: "14px",
+    padding: isMobile ? "8px 12px" : "10px 18px",
+fontSize: isMobile ? "12px" : "14px",
     borderRadius: "12px",
     background: "rgba(15,23,42,0.75)",
     border: "1px solid rgba(168,85,247,0.4)",
@@ -167,40 +173,28 @@ fontSize: "14px",
 {/* Main Section */}
 <div
   style={{
-   display: "flex",
-flexDirection:
-  typeof window !== "undefined" &&
-  window.innerWidth < 768
-    ? "column"
-    : "row",
-
-justifyContent: "center",
-alignItems: "center",
-    padding: "10px 50px",
-gap: "20px",
-    minHeight: "420px",
+  display: "flex",
+  flexDirection: isMobile ? "column-reverse" : "row",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: isMobile ? "30px 10px" : "10px 50px",
+  gap: isMobile ? "20px" : "40px",
+  minHeight: "420px",
   }}
 >
   {/* Left Side */}
   <div
     style={{
       flex: 1,
-      maxWidth:
-  typeof window !== "undefined" &&
-  window.innerWidth < 768
-    ? "100%"
-    : "550px",
+      width: "100%",
+maxWidth: isMobile ? "100%" : "550px",
 
-textAlign:
-  typeof window !== "undefined" &&
-  window.innerWidth < 768
-    ? "center"
-    : "left",
+textAlign: isMobile ? "center" : "left",
     }}
   >
     <p
       style={{
-        fontSize: "24px",
+        fontSize:isMobile ? "18px":"24px",
         color: "#d8b4fe",
         marginBottom: "10px",
       }}
@@ -210,11 +204,7 @@ textAlign:
 
     <h1
       style={{
-        fontSize:
-  typeof window !== "undefined" &&
-  window.innerWidth < 768
-    ? "70px"
-    : "clamp(40px,4vw,65px)",
+       fontSize:isMobile ? "46px":"clamp(40px,4vw,65px)",
         fontWeight: 800,
         
         margin: 0,
@@ -231,7 +221,7 @@ textAlign:
     <p
       style={{
         marginTop: "25px",
-        fontSize: "17px",
+        fontSize:isMobile ? "15px":"18px",
         color: "#e5e7eb",
         lineHeight: 1.8,
       }}
@@ -267,14 +257,13 @@ textAlign:
 
   <div
   style={{
-    width: isMobile ? "100%" : "380px",
+    width:isMobile ? "280px":"350px",
+    maxWidth: "100%",
     flexShrink: 0,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    overflowY: "auto",
-    padding: "25px",
-  }}
+      }}
 >
 
   <PatternMemory />
@@ -285,9 +274,10 @@ textAlign:
     <div
   style={{
     display: "flex",
-    justifyContent: "center",
+    justifyContent:"center",
+flexWrap:"wrap",
     alignItems: "left",
-    gap: "18px",
+    gap:isMobile ? "10px":"18px",
     marginTop: "5px",
   }}
 >
@@ -296,13 +286,14 @@ textAlign:
     target="_blank"
     rel="noopener noreferrer"
     style={{
-      padding: "14px 28px",
+      padding:isMobile ? "10px 16px":"14px 28px",
       borderRadius: "12px",
       background: "rgba(15,23,42,0.8)",
       border: "1px solid rgba(96,165,250,0.4)",
       color: "white",
       textDecoration: "none",
-      fontWeight: "600",
+      fontWeight:600,
+fontSize:isMobile ? "13px":"16px",
     }}
   >
     GitHub
@@ -313,13 +304,14 @@ textAlign:
     target="_blank"
     rel="noopener noreferrer"
     style={{
-      padding: "14px 28px",
+      padding:isMobile ? "10px 16px":"14px 28px",
       borderRadius: "12px",
       background: "rgba(15,23,42,0.8)",
       border: "1px solid rgba(168,85,247,0.4)",
       color: "white",
       textDecoration: "none",
-      fontWeight: "600",
+      fontWeight:600,
+fontSize:isMobile ? "13px":"16px",
     }}
   >
     LinkedIn
@@ -330,13 +322,14 @@ textAlign:
     target="_blank"
     rel="noopener noreferrer"
     style={{
-      padding: "14px 28px",
+      padding:isMobile ? "10px 16px":"14px 28px",
       borderRadius: "12px",
       background: "rgba(15,23,42,0.8)",
       border: "1px solid rgba(236,72,153,0.4)",
       color: "white",
       textDecoration: "none",
-      fontWeight: "600",
+      fontWeight:600,
+fontSize:isMobile ? "13px":"16px",
     }}
   >
     Medium
