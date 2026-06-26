@@ -13,9 +13,14 @@
   }
 }
 
-.skill {
-  position: absolute;
-  transition:.3s;
+.skill{
+    position:absolute;
+    padding:12px 20px;
+    border-radius:999px;
+    background:rgba(139,92,246,.15);
+    border:1px solid rgba(139,92,246,.3);
+    color:white;
+    transition:.3s;
 }
 
 .skill1 {
@@ -80,15 +85,7 @@
 
 .skill{
     position:static !important;
-
     transform:none !important;
-
-    width:auto;
-    height:auto;
-
-    padding:10px 16px;
-
-    font-size:14px;
 }
 
 .skill1,
