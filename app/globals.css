@@ -21,8 +21,28 @@
     border:1px solid rgba(139,92,246,.3);
     color:white;
     transition:.3s;
+    animation: float 4s ease-in-out infinite;
 }
-
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+.skill1{ animation-delay:0s; }
+.skill2{ animation-delay:.5s; }
+.skill3{ animation-delay:1s; }
+.skill4{ animation-delay:1.5s; }
+.skill5{ animation-delay:2s; }
+.skill6{ animation-delay:2.5s; }
+.skill7{ animation-delay:2s; }
+.skill8{ animation-delay:3s; }
+.skill9{ animation-delay:3.4s; }
 .skill1 {
   top: 60px;
   left: 180px;
