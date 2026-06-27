@@ -1,12 +1,28 @@
 "use client";
-import { useState } from "react";
+import DetailsModal from "./ProjectDetailsModal";
+import { useState, useEffect } from "react";
+import FinSightDetails from "./FinSightDetails";
+import MediWiseDetails from "./MediWiseDetails";
+import PortfolioDetails from "./PortfolioDetails";
+
+
+import ScoshDetails from "./ScoshDetails";
+import ChemShastraDetails from "./ChemShastraDetails";
+import HostelDetails from "./HostelDetails";
+import AcademicDetails from "./AcademicDetails";
+
 export default function ProjectsModal({
   onClose,
 }: {
   onClose: () => void;
 }) {
+  
     const [selectedProject, setSelectedProject] =
   useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState("projects");
+ 
+
+  
   if (selectedProject === "iit") {
   return (
     <div
@@ -389,12 +405,84 @@ boxShadow: "0 0 30px rgba(0,0,0,0.4)",
         </p>
 
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "25px",
-          }}
-        >
+  style={{
+    display: "flex",
+    gap: "15px",
+    marginBottom: "35px",
+    flexWrap: "wrap",
+  }}
+>
+  <button
+    style={{
+  ...tabButton,
+  background:
+    activeTab === "projects"
+      ? "linear-gradient(90deg,#60a5fa,#c084fc)"
+      : "rgba(168,85,247,.15)",
+
+  color: "white",
+
+  boxShadow:
+    activeTab === "projects"
+      ? "0 0 20px rgba(168,85,247,.5)"
+      : "none",
+}}
+    onClick={() => setActiveTab("projects")}
+  >
+    Personal Projects
+  </button>
+
+  <button
+    style={{
+  ...tabButton,
+  background:
+    activeTab === "experience"
+      ? "linear-gradient(90deg,#60a5fa,#c084fc)"
+      : "rgba(168,85,247,.15)",
+
+  color: "white",
+
+  boxShadow:
+    activeTab === "projects"
+      ? "0 0 20px rgba(168,85,247,.5)"
+      : "none",
+}}
+    onClick={() => setActiveTab("experience")}
+  >
+    Experience
+  </button>
+
+  <button
+    style={{
+  ...tabButton,
+  background:
+    activeTab === "leadership"
+      ? "linear-gradient(90deg,#60a5fa,#c084fc)"
+      : "rgba(168,85,247,.15)",
+
+  color: "white",
+
+  boxShadow:
+    activeTab === "projects"
+      ? "0 0 20px rgba(168,85,247,.5)"
+      : "none",
+}}
+    onClick={() => setActiveTab("leadership")}
+  >
+    Leadership
+  </button>
+</div>
+
+       {activeTab === "experience" && (
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:
+"repeat(auto-fit,minmax(300px,1fr))",
+gap:"25px",
+}}
+>
        
 
           {/* Card 1 */}
@@ -408,11 +496,11 @@ boxShadow: "0 0 30px rgba(0,0,0,0.4)",
     (Data Analysis & Documentation)
   </p>
   <button
-    onClick={() => setSelectedProject("iit")}
-    style={buttonStyle}
-  >
-    View Details
-  </button>
+  style={viewButton}
+onClick={() => setSelectedProject("iit")}
+>
+View Details
+</button>
 </div>
 
           {/* Card 2 */}
@@ -427,11 +515,11 @@ boxShadow: "0 0 30px rgba(0,0,0,0.4)",
   </p>
 
   <button
-    onClick={() => setSelectedProject("cdac")}
-    style={buttonStyle}
-  >
-    View Details
-  </button>
+  style={viewButton}
+onClick={() => setSelectedProject("cdac")}
+>
+View Details
+</button>
 </div>
 
           {/* Card 3 */}
@@ -445,16 +533,198 @@ boxShadow: "0 0 30px rgba(0,0,0,0.4)",
     (Documentation Contributor)
   </p>
   <button
-    onClick={() => setSelectedProject("openchem")}
-    style={buttonStyle}
-  >
-    View Details
-  </button>
+  style={viewButton}
+onClick={() => setSelectedProject("openchem")}
+>
+View Details
+</button>
 </div>
 
+
         </div>
+        )}
+
+        {activeTab === "projects" && (
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:
+"repeat(auto-fit,minmax(300px,1fr))",
+gap:"25px",
+}}
+>
+
+<div style={cardStyle}>
+<h2>📊 FinSight AI</h2>
+
+<p style={subText}>
+AI Financial Dashboard
+</p>
+
+<button
+style={viewButton}
+onClick={() => setSelectedProject("finsight")}
+>
+View Details
+</button>
+</div>
+
+<div style={cardStyle}>
+<h2>💊 MediWise</h2>
+
+<p style={subText}>
+Medicine Interaction Checker
+</p>
+
+<button
+style={viewButton}
+onClick={() => setSelectedProject("mediwise")}
+>
+View Details
+</button>
+</div>
+
+<div style={cardStyle}>
+<h2>🌐 Portfolio Website</h2>
+
+<p style={subText}>
+Personal Portfolio
+</p>
+
+<button
+style={viewButton}
+onClick={() => setSelectedProject("portfolio")}
+>
+View Details
+</button>
+</div>
+
+</div>
+
+)}
+
+
+{activeTab === "leadership" && (
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:
+"repeat(auto-fit,minmax(300px,1fr))",
+gap:"25px",
+}}
+>
+
+<div style={cardStyle}>
+<h2>🎓 ChemShastra</h2>
+
+<p style={subText}>
+Head
+</p>
+
+<button
+style={viewButton}
+onClick={() => setSelectedProject("chem")}
+>
+View Details
+</button>
+</div>
+
+<div style={cardStyle}>
+<h2>🎨 SCOSH</h2>
+
+<p style={subText}>
+Community Head
+</p>
+
+<button
+style={viewButton}
+onClick={() => setSelectedProject("scosh")}
+>
+View Details
+</button>
+</div>
+
+<div style={cardStyle}>
+<h2>🏛 Student Leadership</h2>
+
+<p style={subText}>
+Joint Academic Affairs Secretary
+</p>
+
+<button
+  style={viewButton}
+  onClick={() => setSelectedProject("academic")}
+>
+  View Details
+</button>
+</div>
+
+<div style={cardStyle}>
+<h2>🏛 Student Leadership</h2>
+
+<p style={subText}>
+Joint Hostel Secretary
+</p>
+
+<button
+  style={viewButton}
+  onClick={() => setSelectedProject("Hostel")}
+>
+  View Details
+</button>
+</div>
+</div>
+
+)}
+
+
+{selectedProject === "finsight" && (
+<FinSightDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+{selectedProject === "mediwise" && (
+<MediWiseDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+{selectedProject === "portfolio" && (
+<PortfolioDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+
+{selectedProject === "scosh" && (
+<ScoshDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+{selectedProject === "chem" && (
+<ChemShastraDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+{selectedProject === "hostel" && (
+<HostelDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
+
+{selectedProject === "academic" && (
+<AcademicDetails
+onClose={() => setSelectedProject(null)}
+/>
+)}
       </div>
     </div>
+
   );
 }
 
@@ -476,6 +746,17 @@ const buttonStyle = {
   color: "white",
   fontWeight: "bold",
 };
+
+const tabButton = {
+  padding: "12px 22px",
+  borderRadius: "999px",
+  border: "1px solid rgba(168,85,247,.4)",
+  background: "rgba(168,85,247,.15)",
+  color: "white",
+  cursor: "pointer",
+  fontWeight: "bold",
+};
+
 const skillText = {
   color: "#60a5fa",
   marginTop: "15px",
@@ -495,3 +776,17 @@ const subText = {
   color: "#c084fc",
 };
 
+
+
+const viewButton = {
+  marginTop: "18px",
+  padding: "10px 22px",
+  border: "none",
+  borderRadius: "12px",
+  background: "linear-gradient(90deg,#60a5fa,#c084fc)",
+  color: "white",
+  fontWeight: "700",
+  fontSize: "15px",
+  cursor: "pointer",
+  boxShadow: "0 4px 15px rgba(168,85,247,0.35)",
+};

@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AboutModal from "./Components/AboutModal";
 import SkillsModal from "./Components/SkillsModal";
 import ContactModal from "./Components/ContactModal";
